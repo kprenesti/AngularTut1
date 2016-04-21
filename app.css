@@ -25,31 +25,32 @@ floatL::after {
   width: 30%;
 }
 
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+#store {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
 }
 
-.menu:before {
-  content: "[";
+#store > .book > img {
+  margin: 0 auto;
+  text-align: center;
 }
 
-.menu:after {
-  content: "]";
+.book {
+  background-color: lightgrey;
+  padding: 10px;
+  margin: 5px;
+  width: 30%;
+  height: 500px;
 }
 
-.menu > li {
-  display: inline;
+.info {
+  position: relative;
+  bottom: 0;
 }
 
-.menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
-}
-
-.menu > li:nth-child(1):before {
-  content: "";
-  padding: 0;
+.book > .btn {
+  width: 100%;
+  /*margin: 0 10px;*/
 }
