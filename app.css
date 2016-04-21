@@ -1,4 +1,29 @@
 /* app css stylesheet */
+body {
+  padding-top: 70px;
+}
+
+* {
+  text-align: center;
+}
+
+floatR {
+  float: right;
+}
+
+floatL {
+  float: left;
+}
+
+floatR::after,
+floatL::after {
+  content: '';
+  clear: both;
+}
+
+#about img {
+  width: 30%;
+}
 
 .menu {
   list-style: none;
