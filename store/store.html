@@ -1,9 +1,9 @@
 <section id="store">
-    <div class="book">
-      <img src="img/lunaHatMaking101.jpg" class="img img-responsive" alt="Luna with a lion hat">
+    <div class="book" ng-repeat="book in books">
+      <img ng-src='{{book.image}}' class="img img-responsive" alt='{{alt}}'>
       <div class="info">
-        <h3>DIY Magic Hat Making 101</h3>
-        <h4>Luna Lovegood</h4>
-        <a class="btn btn-primary">$20.00</a>
+        <h3>{{book.title}}</h3>
+        <h4>{{book.author}}</h4>
+        <a class="btn btn-primary">{{book.price | currency}}</a>
       </div>
 </section>
