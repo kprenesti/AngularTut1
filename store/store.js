@@ -5,7 +5,7 @@ angular.module('bogusPocus.store', ['ngRoute'])
     templateUrl: 'store/store.html',
     controller: 'StoreController'
   })
-  .when('/store/:bookDetails', {
+  .when('/store/:id', {
     templateUrl: 'store/details.html',
     controller: 'BookDetailsController'
   });
@@ -16,6 +16,14 @@ angular.module('bogusPocus.store', ['ngRoute'])
     $scope.books = response.data;
   });
 }])
-.controller('BookDetailsController', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams){
-
+.controller('BookDetailsController', ['$scope', '$http', '$routeParams','$filter', function($scope, $http, $routeParams, $filter){
+  // console.log($routeParams);
+  var bookID = $routeParams.book.id;
+  console.log(bookID);
+  $http.get('components/books.json' + $routeParams.id)
+  .then(function(response){
+    $scope.book = $filter('filter')(response.data, function(d){
+      return d.id == bookID;
+    }); //end $scope.book
+  });
 }]);

@@ -2,21 +2,21 @@
   {
     "image": "img/lunaHatMaking101.jpg",
     "alt": "Luna with a lion hat",
-    "title": "DIY Magic Hat Making 101",
+    "title": "DIY Magic Hat Making 101: A Guide for the Loony",
     "author": "Luna Lovegood",
     "price": 20
   },
   {
     "image": "img/thinkingHat.jpg",
     "alt": "Harry Potter arguing with the Sorting Hat",
-    "title": "Out-Thinking a Thinking Hat",
+    "title": "Out-Thinking a Thinking Hat: Besting Sentient Objects",
     "author": "Harry Potter",
     "price": 11
   },
   {
     "image": "img/42.jpg",
     "alt": "The Answer to Life the Universe and Everything",
-    "title": "The Answer to Life the Universe and Everything",
+    "title": "The Answer to Life, the Universe, and Everything",
     "author": "Galaxy Hitchhiker",
     "price": 42
   },
@@ -30,14 +30,14 @@
   {
     "image": "img/ghostglass.jpg",
     "alt": "Ghostly hand on glass",
-    "title": "Hello From the Other Side",
+    "title": "Hello From the Other Side: Speaking with Spirits",
     "author": "Not Adele",
     "price": 24
   },
   {
     "image": "img/AncientMagic.jpg",
     "alt": "Ancient Magic",
-    "title": "Vintage Magic",
+    "title": "Vintage Magic: Secrets from the Old & Dead",
     "author": "Old Dead People Society",
     "price": 60
   }

@@ -1,10 +1,17 @@
+<section id="intro">
+  <h1>Welcome to Bogus Hocus Pocus</h1>
+  <h2>The Best Collection of Bogus Books for your every Hocus-y, Pocus-y Needs</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</section>
+<hr>
 <section id="store">
     <div class="book" ng-repeat="book in books">
-      <img ng-src='{{book.image}}' class="img img-responsive" alt='{{alt}}'>
+      <img ng-src='{{book.image}}' class="img img-responsive" ng-alt='{{alt}}'>
       <div class="info">
         <h3>{{book.title}}</h3>
         <h4>{{book.author}}</h4>
         <h4>{{book.price | currency}}</h4>
-        <a class="btn btn-primary" href="#/store/:bookDetails">Details</a>
+        <p>{{book.id}}</p>
+        <a class="btn btn-primary btn-block" ng-href="#/store/{{book.id}}">Details</a>
       </div>
 </section>
