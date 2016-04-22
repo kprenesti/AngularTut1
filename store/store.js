@@ -4,6 +4,10 @@ angular.module('bogusPocus.store', ['ngRoute'])
   .when('/store', {
     templateUrl: 'store/store.html',
     controller: 'StoreController'
+  })
+  .when('/store/:bookDetails', {
+    templateUrl: 'store/details.html',
+    controller: 'BookDetailsController'
   });
 }])
 .controller('StoreController', ['$scope', '$http', function($scope, $http){
@@ -11,4 +15,7 @@ angular.module('bogusPocus.store', ['ngRoute'])
   .then(function(response){
     $scope.books = response.data;
   });
+}])
+.controller('BookDetailsController', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams){
+
 }]);

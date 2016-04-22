@@ -42,7 +42,7 @@ floatL::after {
   padding: 10px;
   margin: 5px;
   width: 30%;
-  height: 500px;
+  /*height: 650px;*/
 }
 
 .info {
@@ -52,5 +52,8 @@ floatL::after {
 
 .book > .btn {
   width: 100%;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
   /*margin: 0 10px;*/
 }
