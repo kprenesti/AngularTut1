@@ -11,19 +11,18 @@ angular.module('bogusPocus.store', ['ngRoute'])
   });
 }])
 .controller('StoreController', ['$scope', '$http', function($scope, $http){
+  var vm = $scope;
   $http.get('components/books.json')
   .then(function(response){
-    $scope.books = response.data;
+    vm.books = response.data;
   });
 }])
 .controller('BookDetailsController', ['$scope', '$http', '$routeParams','$filter', function($scope, $http, $routeParams, $filter){
-  // console.log($routeParams);
-  var bookID = $routeParams.book.id;
-  console.log(bookID);
-  $http.get('components/books.json' + $routeParams.id)
+  console.log($routeParams);
+  var vm = $scope;
+  $http.get('components/books.json')
   .then(function(response){
-    $scope.book = $filter('filter')(response.data, function(d){
-      return d.id == bookID;
-    }); //end $scope.book
-  });
+    vm.book = response.data[$routeParams.id];
+    console.log(response.data[$routeParams.id]);
+  }); //end then
 }]);
