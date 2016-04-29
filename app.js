@@ -2,11 +2,11 @@
 
 // Declare app level module which depends on views, and components
 angular.module('bogusPocus', [
-  'ngRoute',
+  'ui.router',
   'bogusPocus.about',
   'bogusPocus.store'
 ])
 
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/store'});
+.config(['$urlRouterProvider', function($urlRouterProvider) {
+  $urlRouterProvider.otherwise('/');
 }]);

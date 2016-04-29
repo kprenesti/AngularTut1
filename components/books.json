@@ -1,5 +1,6 @@
 [
   {
+    "id": 0,
     "image": "img/lunaHatMaking101.jpg",
     "alt": "Luna with a lion hat",
     "title": "DIY Magic Hat Making 101: A Guide for the Loony",
@@ -7,6 +8,7 @@
     "price": 20
   },
   {
+    "id": 1,
     "image": "img/thinkingHat.jpg",
     "alt": "Harry Potter arguing with the Sorting Hat",
     "title": "Out-Thinking a Thinking Hat: Besting Sentient Objects",
@@ -14,6 +16,7 @@
     "price": 11
   },
   {
+    "id": 2,
     "image": "img/42.jpg",
     "alt": "The Answer to Life the Universe and Everything",
     "title": "The Answer to Life, the Universe, and Everything",
@@ -21,6 +24,7 @@
     "price": 42
   },
   {
+    "id": 3,
     "image": "img/hocusPocusMakeup.jpg",
     "alt": "Witches from Hocus Pocus",
     "title": "Spellbinding Beauty: The Definitive Guide",
@@ -28,13 +32,14 @@
     "price": 14
   },
   {
+    "id": 4,
     "image": "img/ghostglass.jpg",
     "alt": "Ghostly hand on glass",
     "title": "Hello From the Other Side: Speaking with Spirits",
     "author": "Not Adele",
     "price": 24
   },
-  {
+  { "id": 5,
     "image": "img/AncientMagic.jpg",
     "alt": "Ancient Magic",
     "title": "Vintage Magic: Secrets from the Old & Dead",

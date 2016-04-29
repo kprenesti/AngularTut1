@@ -1,11 +1,13 @@
 'use strict';
 
-angular.module('bogusPocus.about', ['ngRoute'])
+angular.module('bogusPocus.about', ['ui.router'])
 
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/about', {
+.config(['$stateProvider', function($stateProvider) {
+  $stateProvider.state('about', {
+    url: '/about',
     templateUrl: 'about/about.html',
-    controller: 'AboutController'
+    controller: 'AboutController',
+    controllerAs: 'AboutCtrl'
   });
 }])
 
