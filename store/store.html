@@ -5,12 +5,12 @@
 </section>
 <hr>
 <section id="store">
-    <div class="book" ng-repeat="book in StoreCtrl.books">
+    <div class="book" ng-repeat="book in books">
       <img ng-src='{{book.image}}' class="img img-responsive" ng-alt='{{alt}}'>
       <div class="info">
         <h3>{{book.title}}</h3>
         <h4>{{book.author}}</h4>
         <h4>{{book.price | currency}}</h4>
-        <a class="btn btn-primary btn-block" ui-sref="storeHome.details({Id: book.id})">Details</a>
+        <a class="btn btn-primary btn-block" ui-sref="bookDetails({id:book.id})">Details</a>
       </div>
 </section>

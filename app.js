@@ -9,4 +9,22 @@ angular.module('bogusPocus', [
 
 .config(['$urlRouterProvider', function($urlRouterProvider) {
   $urlRouterProvider.otherwise('/');
-}]);
+}])
+
+.factory('bookListFactory', ['$http', function($http){
+  var bookListFactory ={
+    getBookList: function() {
+      return $http(
+      {
+        url: "components/books.json",
+        method: "GET",
+      })
+      .then(function (response) {
+        return response.data;
+        });
+      }
+    };
+    console.log(bookListFactory);
+    return bookListFactory;
+
+    }]);

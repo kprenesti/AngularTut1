@@ -6,54 +6,32 @@ angular.module('bogusPocus.store', ['ui.router'])
     templateUrl: 'store/store.html',
     controller: 'StoreController',
     controllerAs: 'StoreCtrl'
-  })
-  .state('storeHome.details', {
-    url: ':Id',
+  }) //end state (chained)
+  .state('bookDetails', {
+    url: '/:id',
     templateUrl: 'store/details.html',
-    controller: 'BookDetailsController',
+    controller: 'StoreDetailsController',
     controllerAs: 'DetailsCtrl'
-  });
+  }); //end state
+}]) //end config (chained)
+.controller('StoreController', ['$scope', 'bookListFactory', function($scope, bookListFactory){
+  // var vm = this;
+  var promise = bookListFactory.getBookList();
+  promise.then(function(data){
+    $scope.books = data;
+    console.log($scope.books);
+  })
+
 }])
-.controller('StoreController', ['$scope', '$http', function($scope, $http){
-  var vm = this;
-  $http.get('components/books.json')
-  .then(function(response){
-    vm.books = response.data;
-  });
-}])
-.controller('BookDetailsController', ['$scope', '$stateParams', '$http', function($scope, $stateParams, $http){
-  console.log($stateParams);
-  var vm = this;
-   $http({
-     url: "components/books.json",
-     method: "GET",
-   })
-    .then(function (response) {
-      vm.books = response.data;
-      console.log($scope.books);
-  }); //end then
-
-
-
-//   function findItem(id){
-//   var targetItem = null;
-//   $scope.books.forEach(function(book){
-//     console.log("Test",book.id,id,book.id === id);
-//     if (book.id === id) targetItem = book;
-//   });
-//   return targetItem;
-// }
-//
-// // You never actually call this function
-// function list($scope, $stateParams) {
-//   //assigns book to the integer returned by $stateParams.Id
-//   vm.book = findItem(parseInt($stateParams.Id));
-//   //Copy all of the properties of friend onto scope
-//   angular.extend($scope, book);
-// }
-//
-// if ($stateParams.Id) {
-//   list($scope, $stateParams);
-//   console.log($scope);
-// }
+.controller('StoreDetailsController', ['$scope', 'bookListFactory', '$stateParams', function($scope, bookListFactory, $stateParams){
+  var id = $stateParams.id;
+  var promise = bookListFactory.getBookList();
+  promise.then(function(data){
+    $scope.books = data;
+  }).then(function(){ //end promise.then
+  for(var i=0; i<$scope.books.length; i++){
+    if($scope.books[i].id == id){
+      $scope.book = $scope.books[i];
+    }
+  }});
 }]);
